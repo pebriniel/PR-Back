@@ -1,0 +1,53 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    app.admin.app_project:
+        class: AppBundle\Admin\AppProjectAdmin
+        arguments: [~, BS\CoreBundle\Entity\AppProject, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: front, label: AppProject }
+
+    app.admin.app_technology:
+        class: AppBundle\Admin\AppTechnologyAdmin
+        arguments: [~, BS\CoreBundle\Entity\AppTechnology, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: secondaire, label: AppTechnology }
+
+    app.admin.app_company:
+        class: AppBundle\Admin\AppCompanyAdmin
+        arguments: [~, BS\CoreBundle\Entity\AppCompany, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: secondaire, label: AppCompany }
+
+    app.admin.app_experience:
+        class: AppBundle\Admin\AppExperienceAdmin
+        arguments: [~, BS\CoreBundle\Entity\AppExperience, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: front, label: AppExperience }
+
+    app.admin.app_contact:
+        class: AppBundle\Admin\AppContactAdmin
+        arguments: [~, BS\CoreBundle\Entity\AppContact, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: contact, label: AppContact }
+
+    app.admin.app_profil:
+        class: AppBundle\Admin\AppProfilAdmin
+        arguments: [~, BS\CoreBundle\Entity\AppProfil, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: front, label: AppProfil }
+
+    app.admin.app_screenshot:
+        class: AppBundle\Admin\AppScreenshotAdmin
+        arguments: [~, BS\CoreBundle\Entity\AppScreenshot, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: secondaire, label: AppScreenshot }
+
+    app.admin.app_team:
+        class: AppBundle\Admin\AppTeamAdmin
+        arguments: [~, BS\CoreBundle\Entity\AppTeam, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: secondaire, label: AppTeam }
