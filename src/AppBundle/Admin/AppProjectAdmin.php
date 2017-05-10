@@ -70,6 +70,7 @@ class AppProjectAdmin extends AbstractAdmin
             ))
             ->add('lang')
             ->add('name')
+            ->add('siteweb')
             ->add('description')
             ->add('bandeauproject')
             ->add('logoproject')
