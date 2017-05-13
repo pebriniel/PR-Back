@@ -54,6 +54,6 @@ services:
 
     app.admin.app_socialnetworking:
         class: AppBundle\Admin\AppSocialnetworkingAdmin
-        arguments: [~, BS\CoreBundle\Entity\AppSocialnetworking, AppBundle:AppSocialnetworkingAdmin]
+        arguments: [~, BS\CoreBundle\Entity\AppSocialnetworking, SonataAdminBundle:CRUD]
         tags:
             - { name: sonata.admin, manager_type: orm, group: front, label: AppSocialnetworking }
