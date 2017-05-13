@@ -3,7 +3,7 @@
     "license": "proprietary",
     "type": "project",
     "autoload": {
-        "psr-4": {
+            "psr-4": {
             "": "src/"
         },
         "classmap": [
@@ -40,7 +40,7 @@
     }],
 
     "require-dev": {
-        "sensio/generator-bundle": "^3.0",
+        "sensio/generator-bundle": "^3.1",
         "symfony/phpunit-bridge": "^3.0"
     },
     "scripts": {
